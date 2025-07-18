@@ -1,8 +1,8 @@
 .toast-container {
+  box-shadow: 0px 0px 2px 1px #d1ced4;
   position: fixed !important;
   top: 5px;
   right: 5px;
-  background-color: #e13f33;
   border-radius: 5px;
   .toast-content {
     display: flex;
@@ -20,6 +20,16 @@
     background-color: white;
     animation: progress-animation 3s forwards;
   }
+}
+
+#toast-error {
+  background-color: #e13f33;
+}
+#toast-success {
+  background-color: #1e9c68;
+}
+#toast-warning {
+  background-color: #ffcb00;
 }
 
 @keyframes progress-animation {

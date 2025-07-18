@@ -20,7 +20,7 @@ export const Toast = () => {
   if (!message) return null;
 
   return (
-    <div className="toast-container p-2">
+    <div className="toast-container p-2" id={`toast-${message.type}`}>
       <div className="text-end">
         <button
           type="button"
@@ -37,7 +37,7 @@ export const Toast = () => {
           width={17}
           height={17}
         />
-        <p className="text-white">{message}</p>
+        <p className="text-white">{message.text}</p>
       </div>
       <div className="progress-bar"></div>
     </div>
