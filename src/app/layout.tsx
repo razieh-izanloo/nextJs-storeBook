@@ -1,4 +1,4 @@
-import { RootLayoutProps } from '../types/rootLayout';
+import { LayoutProps } from '../types/layout';
 import StoreProvider from "./StoreProvider";
 import { Toast } from "../components/toast/toast";
 import "./globals.css";
@@ -11,7 +11,7 @@ export const viewport = {
 };
 
 
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: LayoutProps) {
 
   return (
     <html>

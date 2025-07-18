@@ -14,8 +14,12 @@
     height: 40px;
     padding: 0 5px;
     &:focus {
-      border-color: #b229ff;
+      border-color: #1c7acb;
       outline: 0;
+    }
+    &:not(:placeholder-shown) + label {
+      top: -10px;
+      background-color: white;
     }
   }
   label {
@@ -24,5 +28,6 @@
     margin: 0 5px;
     color: #b3acac;
     font-size: 13px;
+    left: 0;
   }
 }

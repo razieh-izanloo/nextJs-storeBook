@@ -1,12 +1,18 @@
-import { INputpProps } from "../../types/Input";
+import { INputpProps } from "../../types/input";
 import "./input.scss";
 
 export const Input = (props: INputpProps) => {
-  const { type = "text", title, id, onChange } = props;
+  const { type = "text", title, onChange, name } = props;
   return (
     <div className="section-input">
-      <label htmlFor={id}>{title}</label>
-      <input type={type} id={id} onChange={(e) => onChange(e.target.value)} />
+      <input
+        type={type}
+        name={name}
+        id={name}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder=" "
+      />
+      <label htmlFor={name}>{title}</label>
     </div>
   );
 };
