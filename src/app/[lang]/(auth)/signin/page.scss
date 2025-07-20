@@ -1,5 +1,5 @@
 .section-auth {
-  box-shadow:-3px 0 12px #e4dfdf;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,5 +15,11 @@
     &:hover {
       background-color: #6dabe4;
     }
+  }
+}
+
+[dir="rtl"] {
+  .section-auth {
+     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.1);
   }
 }

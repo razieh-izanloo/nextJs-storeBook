@@ -31,3 +31,10 @@
     left: 0;
   }
 }
+
+[dir="rtl"] {
+  label {
+    right: 0;
+    left: inherit;
+  }
+}
