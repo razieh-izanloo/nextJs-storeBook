@@ -1,8 +1,8 @@
-import { INputpProps } from "../../types/input";
+import { INputpProps } from "@/types/input";
 import "./input.scss";
 
 export const Input = (props: INputpProps) => {
-  const { type = "text", title, onChange, name } = props;
+  const { type = "text", title, onChange, name, loading } = props;
   return (
     <div className="section-input">
       <input
@@ -12,7 +12,7 @@ export const Input = (props: INputpProps) => {
         onChange={(e) => onChange(e.target.value)}
         placeholder=" "
       />
-      <label htmlFor={name}>{title}</label>
+      {!loading && <label htmlFor={name}>{title}</label>}
     </div>
   );
 };
