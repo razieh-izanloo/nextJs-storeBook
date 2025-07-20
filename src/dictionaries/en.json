@@ -1,0 +1,9 @@
+{
+  "signin": {
+    "title": "Signin",
+    "welcome": "welcome!",
+    "captionBtn": "Sign in",
+    "email": "Email",
+    "password": "Password"
+  }
+}
