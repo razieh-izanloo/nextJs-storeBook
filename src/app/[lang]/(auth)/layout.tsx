@@ -1,39 +1,41 @@
-import { LayoutProps } from "@/src/types/layout";
+import { LayoutProps } from "@/types/layout";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function AuthLayout({ children }: LayoutProps) {
   return (
-    <div className="grid md:grid-cols-2">
-      <div className="hidden md:flex justify-center items-center">
-        <Image
-          src="/images/signin-image.jpg"
-          alt="store book login"
-          width="300"
-          height="300"
-        />
-      </div>
-      <div className="section-auth px-4">
-        <div className="flex justify-center ">
+    <div className="container">
+      <div className="w-full grid md:grid-cols-4 lg:grid-cols-3">
+        <div className="hidden md:flex justify-center items-center md:col-span-2 lg:col-span-2">
           <Image
-            src="/images/logo.png"
-            className="my-4"
-            alt="bookStore logo"
-            width="70"
-            height="70"
+            src="/images/signin-image.jpg"
+            alt="store book login"
+            width="300"
+            height="300"
           />
         </div>
-        {children}
-        <div className="flex flex-col items-end text-end gap-3 py-3">
-          <Link
-            href="en/forgetpass"
-            className="text-[#1c7acb] text-[15px] w-fit"
-          >
-            Forget Password?
-          </Link>
-        <Link href="en/signup" className="text-[15px] w-fit">
-          sign up
-        </Link>
+        <div className="section-auth px-4 md:col-span-2 lg:col-span-1">
+          <div className="flex justify-center ">
+            <Image
+              src="/images/logo.png"
+              className="my-4"
+              alt="bookStore logo"
+              width="70"
+              height="70"
+            />
+          </div>
+          {children}
+          <div className="flex flex-col items-end text-end gap-3 py-3">
+            <Link
+              href="en/forgetpass"
+              className="text-[#1c7acb] text-[15px] w-fit"
+            >
+              Forget Password?
+            </Link>
+            <Link href="en/signup" className="text-[15px] w-fit">
+              sign up
+            </Link>
+          </div>
         </div>
       </div>
     </div>
