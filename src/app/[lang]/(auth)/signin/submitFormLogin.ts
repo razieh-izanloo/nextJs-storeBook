@@ -10,6 +10,15 @@
         }),
       });
 
-      const { status } = await res.json();
-      return status;    
+      const data = await res.json();
+      return data.status;    
   };
+
+   export const messages: Record<number, { text: string; type: string }> = {
+      200: { text: "login success", type: "success" },
+      401: { text: "The email or password is incorrect.", type: "error" },
+      500: {
+        text: "There is a problem with the server. Please try again",
+        type: "error",
+      },
+    };
