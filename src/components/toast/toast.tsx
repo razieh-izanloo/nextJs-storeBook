@@ -33,7 +33,7 @@ export const Toast = () => {
       <div className="toast-content">
         <Image
           src="/images/icons/warning-circle.svg"
-          alt="warning toast"
+          alt={message.text}
           width={17}
           height={17}
         />
