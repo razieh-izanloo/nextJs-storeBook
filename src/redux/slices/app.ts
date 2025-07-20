@@ -1,11 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface AppState {
-    errorMessage: string | null,
+    errorMessage: {text: string; type: string} | null,
+    lang: string;
+    dir: string;
 }
 
 export const initialState: AppState = {
-    errorMessage: null,    
+    errorMessage: null,   
+    lang: "en",
+    dir: "ltr"
 }
 
 export const appSlice = createSlice({
