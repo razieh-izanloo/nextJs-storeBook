@@ -5,6 +5,8 @@
       "@/components/*": ["components/*"],
       "@/types/*": ["types/*"],
       "@/redux/*": ["redux/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/helpers/*": ["helpers/*"],
     },
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
