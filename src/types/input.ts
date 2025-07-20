@@ -3,4 +3,5 @@ export interface INputpProps {
   title: string;
   onChange: any;
   name: string;
+  loading?: boolean;
 }
