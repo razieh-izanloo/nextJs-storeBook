@@ -27,7 +27,7 @@ const Signin = () => {
       );
     else {
       const status = await submitFormLogin(values.email, values.password);
-      if (status === 200) router.push("/home");
+      if (status === 200) router.push(`/${currentLang}/home`);
       dispatch(
         updateApp({
           errorMessage: {
