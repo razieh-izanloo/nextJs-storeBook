@@ -1,5 +1,4 @@
 .section-auth {
-  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,8 +17,13 @@
   }
 }
 
-[dir="rtl"] {
+@media screen and (min-width: 768px) {
   .section-auth {
-     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  [dir="rtl"] {
+    .section-auth {
+      box-shadow: 3px 0 4px rgba(0, 0, 0, 0.1);
+    }
   }
 }

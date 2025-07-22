@@ -1,6 +1,7 @@
 import { LayoutProps } from "@/types/layout";
 import Image from "next/image";
 import Link from "next/link";
+import "./layout.scss";
 
 export default async function AuthLayout({ children }: LayoutProps) {
   return (
