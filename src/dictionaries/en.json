@@ -5,5 +5,13 @@
     "captionBtn": "Sign in",
     "email": "Email",
     "password": "Password"
+  },
+  "home": {
+    "home": "Home",
+    "publishers": "Publishers",
+    "sellers": "Sellers",
+    "author": "Author",
+    "signin": "Sign in",
+    "signup": "Sign up"
   }
 }

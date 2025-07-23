@@ -5,5 +5,13 @@
     "captionBtn": "ورود",
     "email": "ایمیل",
     "password": "رمزعبور"
+  },
+  "home": {
+    "home": "صفحه اصلی",
+    "publishers": "ناشران",
+    "sellers": "فروشندگان",
+    "author": "نویسندگان",
+    "signin": "ورود",
+    "signup": "ثبت نام"
   }
 }
