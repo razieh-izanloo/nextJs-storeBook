@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { messages, submitFormLogin } from "./submitFormLogin";
 import { useDictionary } from "@/hooks/useDictionary";
 import Skeleton from "react-loading-skeleton";
-import "./page.scss";
 
 const Signin = () => {
   const [values, setValues] = useState({ email: "", password: "" });
