@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { NavbarActions } from "./navbarActions";
 import { useAppSelector } from "@/redux/hooks";
 import { useDictionary } from "@/hooks/useDictionary";
 import { usePathname } from "next/navigation";
+import { NavItems } from "./navItems";
 
 jest.mock("@/redux/hooks", () => ({
   useAppSelector: jest.fn(),
@@ -28,14 +28,19 @@ describe("NavItems component", () => {
   beforeEach(() => {
     mockedUseAppSelector.mockReturnValue("fa");
     (useDictionary as jest.Mock).mockReturnValue({
-      dict: { home: "home page", sellers: "list sellers" },
+      dict: {
+        home: "home page",
+        sellers: "list sellers",
+        publishers: "publishers",
+        author: "author",
+      },
       loadingTranslate: false,
     });
   });
   (usePathname as jest.Mock).mockReturnValue("/fa/home");
 
   it("renders translated text", () => {
-    render(<NavbarActions />);
+    render(<NavItems />);
     expect(screen.getByText("home page")).toBeInTheDocument();
     expect(screen.getByText("list sellers")).toBeInTheDocument();
   });
@@ -46,9 +51,9 @@ describe("NavItems component", () => {
       loadingTranslate: true,
     });
 
-    render(<NavbarActions />);
-    expect(screen.getByText(/loading/i)).toBeInTheDocument();
-    expect(screen.getByText("home page")).not.toBeInTheDocument();
+    render(<NavItems />);
+    expect(screen.getAllByText("loading")[0]).toBeInTheDocument();
+    expect(screen.queryByText("home page")).not.toBeInTheDocument();
   });
 
   it("There should be navigation items with links on the page", () => {
@@ -56,27 +61,28 @@ describe("NavItems component", () => {
     //   dict: {},
     //   loadingTranslate: false,
     // });
-    render(<NavbarActions />);
-const items = [
-  { name: "home", href: "/home" },
-  { name: "publishers", href: "/publishers" },
-  { name: "sellers", href: "/sellers" },
-  { name: "author", href: "/author" },
-]
-items.forEach(item => 
-    expect(screen.getByText(item.name)).toBeInTheDocument()
+    render(<NavItems />);
+    const items = [
+      { name: "home page", href: "/home" },
+      { name: "list sellers", href: "/sellers" },
+      { name: "publishers", href: "/publishers" },
+      { name: "author", href: "/author" },
+    ];
+    items.forEach((item) => {
+      const link = screen.getByText(item.name);
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute("href", item.href);
+    });
 
-)
+    // const links = screen.getAllByRole("link");
+    // const loginLink = links.find(
+    //   (link) => link.getAttribute("href") === "/fa/signin"
+    // );
+    // const cartLink = links.find(
+    //   (link) => link.getAttribute("href") === "/fa/basket"
+    // );
 
-    const links = screen.getAllByRole("link");
-    const loginLink = links.find(
-      (link) => link.getAttribute("href") === "/fa/signin"
-    );
-    const cartLink = links.find(
-      (link) => link.getAttribute("href") === "/fa/basket"
-    );
-
-    expect(loginLink).toBeInTheDocument();
-    expect(cartLink).toBeInTheDocument();
+    // expect(loginLink).toBeInTheDocument();
+    // expect(cartLink).toBeInTheDocument();
   });
 });
