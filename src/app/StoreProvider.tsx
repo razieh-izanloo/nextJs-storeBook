@@ -3,8 +3,8 @@ import { useEffect, useRef } from "react";
 import { Provider } from "react-redux";
 import { makeStore, AppStore } from "../redux/store";
 import { updateApp } from "@/redux/slices/app";
-import { getCurrentLang } from "@/helpers/language";
-import { INFO_LANGS } from "@/helpers/constants";
+import { INFO_LANGS, LANG_COOKIE_NAME } from "@/helpers/constants";
+import { cookieValue } from "@/helpers/cookie";
 
 export default function StoreProvider({
   children,
@@ -18,11 +18,10 @@ export default function StoreProvider({
   }
 
   useEffect(() => {
-    getCurrentLang().then((currentLang) => {
-      storeRef.current?.dispatch(
-        updateApp({ lang: currentLang, dir: INFO_LANGS[currentLang].dir })
+    const lang = cookieValue(LANG_COOKIE_NAME) ?? "en";
+   storeRef.current?.dispatch(
+        updateApp({ lang: lang, dir: INFO_LANGS[lang].dir })
       );
-    });
   }, []);
 
   return <Provider store={storeRef.current}>{children}</Provider>;
