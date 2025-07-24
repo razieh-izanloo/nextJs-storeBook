@@ -24,7 +24,7 @@ export const NavItems = () => {
           ) : (
             <a
               key={item.name}
-              href={item.href}
+              href={`/${lang}/${item.href}`}
               className={`${
                 pathname.includes(item.href)
                   ? "text-[#615b5b]"
