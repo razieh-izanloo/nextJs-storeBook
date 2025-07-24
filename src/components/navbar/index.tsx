@@ -1,15 +1,16 @@
 "use client";
-import { useAppSelector } from "@/redux/hooks";
 import Image from "next/image";
 import { useState } from "react";
 import { NavItems } from "./navItems";
 import { NavbarActions } from "./navbarActions";
 import "./navbar.scss";
+import { Search } from "@/components/search/index";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
+    <>
     <nav className="w-full bg-white mx-auto max-w-7xl md:px-6 lg:px-8 md:gap-2">
       <div
         className={`${
@@ -43,5 +44,7 @@ export const Navbar = () => {
        <NavbarActions/>
       </div>
     </nav>
+    <Search/>
+    </>
   );
 };
