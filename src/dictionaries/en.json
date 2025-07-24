@@ -13,5 +13,8 @@
     "author": "Author",
     "signin": "Sign in",
     "signup": "Sign up"
+  },
+  "search": {
+    "placeholder": "Enter your desired phrase"
   }
 }
