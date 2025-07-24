@@ -5,6 +5,7 @@ import { Toast } from "../components/toast/toast";
 import "./globals.css";
 import { getCurrentLang } from "@/helpers/language";
 import { INFO_LANGS } from "@/helpers/constants";
+import { Navbar } from "@/components/navbar/index";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -20,6 +21,7 @@ export default async function RootLayout({ children }: LayoutProps) {
     <html lang={currentLang} dir={INFO_LANGS[currentLang].dir}>
       <body>
         <StoreProvider>
+          <Navbar/>
           <Toast />
           {children}
         </StoreProvider>
