@@ -1,0 +1,50 @@
+.section-slider {
+  border: 1px solid #7b7b7b;
+  border-radius: 3px;
+  position: relative;
+
+  .pagination {
+    bottom: 8px;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    gap: 2px;
+    .item {
+      width: 7px;
+      height: 7px;
+      border-radius: 20px;
+      background-color: #b8babc;
+      &.active {
+        background-color: #0fa5a1;
+        width: 14px;
+      }
+    }
+  }
+  .slide-img {
+    border-radius: 3px;
+  }
+  .btns-slider {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    .btn {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      &.disable {
+        background-color: #e6e6e6;
+        cursor: inherit;
+      }
+    }
+  }
+}
