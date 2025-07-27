@@ -17,7 +17,7 @@ export const Category = async () => {
 
   return (
     <Swipe>
-      <div className="section-category">
+      <div className="section-category px-2 px-lg-0">
         {categories &&
           categories.map((item: { name: string }, index) => (
             <Link

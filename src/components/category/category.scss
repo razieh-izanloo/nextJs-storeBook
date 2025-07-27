@@ -1,6 +1,7 @@
 .section-category {
   display: flex;
   padding: 2rem 0;
+  overflow: hidden;
   gap: 1rem;
   .link-category {
     flex: 0 0 auto;

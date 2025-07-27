@@ -78,7 +78,7 @@ export const Swipe = ({ children, autoScroll = false }: Props) => {
   }, [autoScroll, dir]);
 
   return (
-    <div ref={ref} className="category-swipe-container">
+    <div ref={ref} className="category-swipe-container px-2 px-lg-0">
       {children}
     </div>
   );

@@ -63,3 +63,11 @@ body {
     font-family: "iransans";
   }
 }
+
+@media screen and (min-width: 992px) {
+  .px-lg-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+

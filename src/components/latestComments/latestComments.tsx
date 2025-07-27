@@ -15,8 +15,8 @@ export const LatestComments = async () => {
   return (
     data && (
       <>
-        <h3 className="my-3">آخرین نظرات</h3>
-        <div className="flex justify-center md:justify-start">
+        <h3 className="my-3 px-2 px-lg-0">آخرین نظرات</h3>
+        <div className="flex justify-center md:justify-start md:px-2">
           <div className="grid sm:grid-cols-2 gap-4 mb-3 justify-center lg:justify-start latestComments">
             {data.map((item: CardProps, index) => (
               <Card key={index} {...item} />

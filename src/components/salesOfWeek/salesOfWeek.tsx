@@ -22,7 +22,7 @@ export const SalesOfWeek = async () => {
 
   return (
     <div className="section-salesOfWeek">
-      <span className="block mb-3">{translate.title}</span>
+      <span className="block mb-3 px-2 px-lg-0">{translate.title}</span>
       <Swipe autoScroll>
         {data &&
           data.map((item: { [key: string]: string }, index) => (
