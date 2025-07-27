@@ -17,7 +17,7 @@
   "search": {
     "placeholder": "عبارت موردنظر خود را وارد کنید"
   },
-    "category": {
+  "category": {
     "language": "زبان",
     "palette": "هنر",
     "stethoscope": "علوم پزشکی",
@@ -28,5 +28,8 @@
     "childrenAndTeenagers": "کودک و نوجوان",
     "family": "خانواده",
     "history": "تاریخ"
+  },
+  "salesOfWeek": {
+    "title": "پرفروش های هفته"
   }
 }

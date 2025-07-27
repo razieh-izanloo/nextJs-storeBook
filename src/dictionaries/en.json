@@ -28,5 +28,8 @@
     "childrenAndTeenagers": "Children and teenagers",
     "family": "Family",
     "history": "History"
+  },
+  "salesOfWeek": {
+    "title": "Best sellers of the week"
   }
 }

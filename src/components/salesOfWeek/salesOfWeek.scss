@@ -1,0 +1,29 @@
+.section-salesOfWeek {
+  padding: 2rem 0;
+  .category-swipe-container {
+    display: flex;
+    gap: 23px;
+    font-size: 12px;
+    .link-salesOfWeek {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      width: 163px;
+      flex: 0 0 auto;
+      .img-book {
+        width: 163px;
+        height: 242px;
+        position: relative;
+        img {
+          border-radius: 8px;
+        }
+      }
+      span {
+        display: block;
+        width: 163px;
+      }
+    }
+  }
+}
