@@ -1,16 +1,19 @@
 "use client";
 import { useRef, useEffect, ReactNode } from "react";
+import { useAppSelector } from "@/redux/hooks";
 import "./swipe.scss";
 
 type Props = {
   children: ReactNode;
+  autoScroll?: boolean;
 };
 
-export const Swipe = ({ children }: Props) => {
+export const Swipe = ({ children, autoScroll = false }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
+  const dir = useAppSelector((state) => state.app.dir);
 
   useEffect(() => {
-    const el = ref?.current;
+    const el = ref.current;
     if (!el) return;
 
     let isDown = false;
@@ -42,13 +45,37 @@ export const Swipe = ({ children }: Props) => {
     el.addEventListener("mouseleave", onMouseUp);
     el.addEventListener("mouseup", onMouseUp);
 
+    let interval: NodeJS.Timeout | null = null;
+
+    interval = setInterval(() => {
+      if (!el) return;
+
+      const scrollAmount = 100;
+      const maxScrollLeft = el.scrollWidth - el.clientWidth;
+
+      if (dir === "rtl") {
+        if (Math.abs(el.scrollLeft) >= maxScrollLeft) {
+          el.scrollLeft = 0;
+        } else {
+          el.scrollLeft -= scrollAmount;
+        }
+      } else {
+        if (el.scrollLeft >= maxScrollLeft) {
+          el.scrollLeft = 0;
+        } else {
+          el.scrollLeft += scrollAmount;
+        }
+      }
+    }, 5000);
+
     return () => {
       el.removeEventListener("mousedown", onMouseDown);
       el.removeEventListener("mousemove", onMouseMove);
       el.removeEventListener("mouseleave", onMouseUp);
       el.removeEventListener("mouseup", onMouseUp);
+      if (interval) clearInterval(interval);
     };
-  }, []);
+  }, [autoScroll, dir]);
 
   return (
     <div ref={ref} className="category-swipe-container">
