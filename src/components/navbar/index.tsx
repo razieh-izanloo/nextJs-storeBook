@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   return (
     <>
-    <nav className="w-full bg-white mx-auto max-w-7xl md:px-6 lg:px-8 md:gap-2">
+    <nav className="w-full bg-white md:px-6 lg:px-8 md:gap-2">
       <div
         className={`${
           mobileMenuOpen ? "open" : ""
