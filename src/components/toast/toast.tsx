@@ -15,7 +15,7 @@ export const Toast = () => {
         dispatch(updateApp({ errorMessage: null }));
       }, 3000);
     }
-  }, [message]);
+  }, [message, dispatch]);
 
   if (!message) return null;
 

@@ -32,10 +32,12 @@ export const Navbar = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center md:items-stretch md:justify-start w-full md:w-fit">
           <div className="flex shrink-0 items-center">
-            <img
+            <Image
               className="h-8 w-auto"
               src="/images/logo.png"
               alt="Your Company"
+              width={150}
+              height={150}
             />
           </div>
           <NavItems />

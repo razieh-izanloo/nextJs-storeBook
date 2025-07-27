@@ -1,7 +1,7 @@
 export interface INputpProps {
   type?: string;
   title: string;
-  onChange: any;
+  onChange: (value: string) => void;
   name: string;
   loading?: boolean;
 }

@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { Toast } from "./toast";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { updateApp } from "../../redux/slices/app";
 import * as reduxHooks from "../../redux/hooks";
 

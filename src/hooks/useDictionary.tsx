@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useDictionary<T = any>(locale: string, key?: string) {
   const [dict, setDict] = useState<T | null>(null);
   const [loadingTranslate, setLoadingTranslate] = useState(true);
@@ -12,10 +13,10 @@ export function useDictionary<T = any>(locale: string, key?: string) {
 
     const load = async () => {
       try {
-        const module = await import(`../dictionaries/${locale}.json`);
+        const dictionaryModule = await import(`../dictionaries/${locale}.json`);
         if (!active) return;
 
-        const fullDict = module.default;
+        const fullDict = dictionaryModule.default;
 
         const result = key ? fullDict?.[key] : fullDict;
 

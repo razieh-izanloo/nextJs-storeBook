@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 
 const data =[
@@ -19,7 +19,7 @@ export async function GET() {
       const response = NextResponse.json({ data: data, status: 200 });
       return response;
     
-  } catch (error) {
+  } catch {
     return NextResponse.json({ message: "Internal Server Error" , status: 500 });
   }
 }

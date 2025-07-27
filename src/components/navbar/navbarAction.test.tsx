@@ -12,8 +12,10 @@ jest.mock("@/hooks/useDictionary", () => ({
 }));
 
 jest.mock("react-loading-skeleton", () => {
-  return () => <div data-testid="skeleton">loading</div>;
-});
+  const MockSkeleton = () => <div data-testid="skeleton">loading</div>;
+  MockSkeleton.displayName = "MockSkeleton";
+  return MockSkeleton;
+})
 
 const mockedUseAppSelector = useAppSelector as jest.MockedFunction<
   typeof useAppSelector

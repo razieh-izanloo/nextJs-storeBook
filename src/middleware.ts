@@ -42,6 +42,7 @@ export function middleware(request: NextRequest) {
       pathname.startsWith(`/${validLocale}/${path}/`)
   );
   if (token) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
     const decoded: any = jwtDecode(token);
     const currentTime = Math.floor(Date.now() / 1000);
 

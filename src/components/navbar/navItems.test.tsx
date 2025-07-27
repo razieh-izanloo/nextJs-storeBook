@@ -13,8 +13,10 @@ jest.mock("@/hooks/useDictionary", () => ({
 }));
 
 jest.mock("react-loading-skeleton", () => {
-  return () => <div data-testid="skeleton">loading</div>;
-});
+  const MockSkeleton = () => <div data-testid="skeleton">loading</div>;
+  MockSkeleton.displayName = "MockSkeleton";
+  return MockSkeleton;
+})
 
 jest.mock("next/navigation", () => ({
   usePathname: jest.fn(),
