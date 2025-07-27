@@ -4,6 +4,7 @@ export interface CardProps {
   comment: string;
   title: string;
   bookTitle: string;
-  bookImage: string;
+  bookImage: string
+  id: string;
   stars: number;
 }

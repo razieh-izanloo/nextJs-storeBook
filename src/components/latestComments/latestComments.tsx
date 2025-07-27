@@ -1,6 +1,7 @@
 import { getDictionary } from "dictionaries/dictionaries";
-import { Card } from "./card";
 import { CardProps } from "@/types/cardLatestComment";
+import { Card } from "./card";
+import "./latestComments.scss";
 
 export const LatestComments = async () => {
   let data: [];
@@ -13,11 +14,16 @@ export const LatestComments = async () => {
 
   return (
     data && (
-      <div className="flex gap-4 px-4 py-6">
-        {data.map((item: CardProps, index) => (
-          <Card key={index} {...item} />
-        ))}
-      </div>
+      <>
+        <h3 className="my-3">آخرین نظرات</h3>
+        <div className="flex justify-center md:justify-start">
+          <div className="grid sm:grid-cols-2 gap-4 mb-3 justify-center lg:justify-start latestComments">
+            {data.map((item: CardProps, index) => (
+              <Card key={index} {...item} />
+            ))}
+          </div>
+        </div>
+      </>
     )
   );
 };

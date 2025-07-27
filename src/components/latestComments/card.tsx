@@ -1,7 +1,9 @@
+import { getCurrentLang } from "@/helpers/language";
 import { CardProps } from "@/types/cardLatestComment";
 import Image from "next/image";
+import Link from "next/link";
 
-export const Card = ({
+export const Card = async ({
   fullname,
   date,
   comment,
@@ -9,7 +11,10 @@ export const Card = ({
   bookTitle,
   bookImage,
   stars,
+  id,
 }: CardProps) => {
+  const currentLang = await getCurrentLang();
+
   return (
     <div className="flex flex-col justify-between rounded-2xl shadow p-4 bg-white w-[294px] max-w-sm text-[14px]">
       <div>
@@ -35,14 +40,15 @@ export const Card = ({
         <div className="text-sm text-gray-500 mb-2">{title}</div>
       </div>
 
-      <div className="flex items-start gap-2 pt-4 border-t border-[#c7ccd1]">
+      <Link
+        href={`/${currentLang}/product/${id}`}
+        className="flex items-start gap-2 pt-4 border-t border-[#c7ccd1]"
+      >
         <div className="w-12 h-20 relative rounded shrink-0">
           <Image src={bookImage} alt="book" fill className="object-cover" />
         </div>
-        <span className="text-[12px] text-gray-800">
-          {bookTitle}
-        </span>
-      </div>
+        <span className="text-[12px] text-gray-800">{bookTitle}</span>
+      </Link>
     </div>
   );
 };

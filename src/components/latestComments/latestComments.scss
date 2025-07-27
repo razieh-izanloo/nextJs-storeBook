@@ -1,0 +1,5 @@
+@media screen and (min-width: 1200px) {
+  .latestComments {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
