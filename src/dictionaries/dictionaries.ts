@@ -1,7 +1,7 @@
+import { getCurrentLang } from "@/helpers/language";
 
-const dictionaries: Record<string, () => Promise<any>> = {
-  en: () => import('./en.json').then((m) => m.default),
-}
-
-export const getDictionary = async (locale: 'en' | 'fa') =>
-  dictionaries[locale]?.() ?? dictionaries['en']()
+export const getDictionary = async (section: string) => {
+  const currentLang = (await getCurrentLang()) ?? "en";
+  const dict = await import(`./${currentLang}.json`);
+  return dict.default[section];
+};
