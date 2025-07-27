@@ -16,5 +16,17 @@
   },
   "search": {
     "placeholder": "Enter your desired phrase"
+  },
+  "category": {
+    "language": "Language",
+    "palette": "Palette",
+    "stethoscope": "Stethoscope",
+    "psychology": "Psychology",
+    "literature": "Literature",
+    "exercise": "Exercise",
+    "engineering": "Engineering",
+    "childrenAndTeenagers": "Children and teenagers",
+    "family": "Family",
+    "history": "History"
   }
 }

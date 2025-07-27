@@ -16,5 +16,17 @@
   },
   "search": {
     "placeholder": "عبارت موردنظر خود را وارد کنید"
+  },
+    "category": {
+    "language": "زبان",
+    "palette": "هنر",
+    "stethoscope": "علوم پزشکی",
+    "psychology": "روانشناسی",
+    "literature": "ادبیات",
+    "exercise": "ورزش",
+    "engineering": "مهندسی",
+    "childrenAndTeenagers": "کودک و نوجوان",
+    "family": "خانواده",
+    "history": "تاریخ"
   }
 }
