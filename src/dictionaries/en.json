@@ -37,5 +37,18 @@
     "directPurchase": "Direct Purchase (No Middleman)",
     "subsidizedPrices": "Subsidized Prices",
     "nationwideShipping": "Nationwide Shipping"
+  },
+  "footer": {
+    "ketabNet": "KetabNet",
+    "contactUs": "Contact Us",
+    "aboutUs": "About Us",
+    "customers": "Customers",
+    "support": "Support",
+    "help": "Help",
+    "reviews": "Reviews",
+    "FAQ": "FAQ",
+    "copyRight": "All rights reserved for the KetabNet bookstore.",
+    "desc": "KetabNet is an online store for easy access to the world of books.",
+    "followUs": "Follow us"
   }
 }
