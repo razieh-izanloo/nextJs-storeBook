@@ -15,11 +15,10 @@ export const Category = async () => {
 
   const t = await getDictionary("category");
 
-  return (
-    <Swipe>
+  return categories &&
       <div className="section-category px-2 px-lg-0">
-        {categories &&
-          categories.map((item: { name: string }, index) => (
+    <Swipe>
+          {categories.map((item: { name: string }, index) => (
             <Link
               className="link-category"
               href={{ pathname: "/subjects", query: { subject: item.name } }}
@@ -33,8 +32,8 @@ export const Category = async () => {
               />
               {t[item.name]}
             </Link>
-          ))}
-      </div>
-    </Swipe>
-  );
+    ))}
+    </Swipe>        
+    </div>
+  
 };
