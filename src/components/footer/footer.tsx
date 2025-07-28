@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { links, socialMedia } from "./itemsFooter";
-
+import { LanguageSelector } from "../languageSelector/languageSelector";
 
 export const Footer = async () => {
   const currentLang = await getCurrentLang();
@@ -12,7 +12,7 @@ export const Footer = async () => {
 
   return (
     <footer className="bg-white text-[#484d52] py-10 mt-10 w-full">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-right">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
           <Link href={`/${currentLang}/home`}>
             <Image src="/images/logo.png" width={65} height={45} alt="logo" />
@@ -24,22 +24,24 @@ export const Footer = async () => {
               </span>
             ))}
           </div>
-          <p>lang</p>
+          <LanguageSelector />
         </div>
         {links.map((itemLink, index) => (
           <div key={index}>
-            <h2 className="text-[16px] font-bold mb-3">{itemLink.title}</h2>
-            {itemLink.items.map((item, indexItem) => (
-              <ul key={indexItem} className="space-y-1 text-sm">
-                <li>
+            <h2 className="text-[16px] font-bold mb-3">
+              {translate[itemLink.title]}
+            </h2>
+            <ul className="space-y-1 text-sm">
+              {itemLink.items.map((item, indexItem) => (
+                <li key={indexItem}>
                   <Link href={item.url}>{translate[item.text]}</Link>
                 </li>
-              </ul>
-            ))}
+              ))}
+            </ul>
           </div>
         ))}
         <div>
-          <h2 className="text-[16px] font-bold mb-3">مارا دنبال کنید</h2>
+          <h2 className="text-[16px] font-bold mb-3">{translate.followUs}</h2>
           <div className="flex justify-center md:justify-start gap-4 text-gray-300">
             {socialMedia.map((item, index) => (
               <Link key={index} href={item.href}>
