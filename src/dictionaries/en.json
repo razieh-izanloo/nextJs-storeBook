@@ -50,5 +50,8 @@
     "copyRight": "All rights reserved for the KetabNet bookstore.",
     "desc": "KetabNet is an online store for easy access to the world of books.",
     "followUs": "Follow us"
+  },
+  "latestComments": {
+    "title": "Latest comments"
   }
 }
