@@ -31,5 +31,11 @@
   },
   "salesOfWeek": {
     "title": "Best sellers of the week"
+  },
+  "storeFeatures": {
+    "bookCollection": "The Most Comprehensive Book Collection",
+    "directPurchase": "Direct Purchase (No Middleman)",
+    "subsidizedPrices": "Subsidized Prices",
+    "nationwideShipping": "Nationwide Shipping"
   }
 }

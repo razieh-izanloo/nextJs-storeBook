@@ -31,5 +31,13 @@
   },
   "salesOfWeek": {
     "title": "پرفروش های هفته"
+  },
+  "storeFeatures": {
+    "nationwideShipping": "ارسال به سراسر کشور",
+    "subsidizedPrices": "برخورداری از یارانه",
+    "directPurchase": "خرید بدون واسطه",
+    "bookCollection": "کامل ترین بانک کتاب"
   }
 }
+
+ 
