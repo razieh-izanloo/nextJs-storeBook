@@ -53,5 +53,16 @@
   },
   "latestComments": {
     "title": "آخرین نظرات"
+  },
+  "product": {
+    "nameBook": "نام کتاب",
+    "author": "نویسنده",
+    "translators": "مترجمان",
+    "publisher": "ناشر",
+    "category": "دسته بندی",
+    "numberOfPages": "تعداد صفحات",
+    "publicationDate": "تاریخ انتشار",
+    "bookSpecifications": "مشخصات کتاب",
+    "users'Opinion": "دیدگاه کاربران"
   }
 }

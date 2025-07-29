@@ -53,5 +53,16 @@
   },
   "latestComments": {
     "title": "Latest comments"
+  },
+  "product": {
+    "nameBook": "Name book",
+    "author": "Author",
+    "translators": "Translators",
+    "publisher": "Publisher",
+    "category": "Category",
+    "numberOfPages": "Number of pages",
+    "publicationDate": "Publication date",
+    "bookSpecifications": "Book specifications",
+    "users'Opinion": "Users' opinion"
   }
 }

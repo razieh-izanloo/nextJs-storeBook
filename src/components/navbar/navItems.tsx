@@ -12,7 +12,7 @@ const items = [
 
 export const NavItems = () => {
   const lang = useAppSelector((state) => state.app.lang);
-  const { dict, loadingTranslate } = useDictionary(lang, "home");
+  const { dict, loadingTranslate } = useDictionary("home");
   const pathname = usePathname();
 
   return (

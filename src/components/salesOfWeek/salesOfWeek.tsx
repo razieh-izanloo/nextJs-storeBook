@@ -29,9 +29,7 @@ export const SalesOfWeek = async () => {
             <Link
               className="link-salesOfWeek"
               href={{
-                pathname: `/${currentLang}/product/${item.id}/${slugify(
-                  item.title
-                )}`,
+                pathname: `/${currentLang}/product/${item.id}}`,
               }}
               key={index}
             >
