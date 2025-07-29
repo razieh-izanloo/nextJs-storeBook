@@ -70,4 +70,6 @@ body {
     padding-right: 0;
   }
 }
-
+input:focus {
+  outline: 0;
+}
