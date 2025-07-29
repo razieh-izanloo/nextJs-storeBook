@@ -9,3 +9,5 @@ export const INFO_LANGS: { [key: string]: { dir: string, label: string } } = {
   fa: { dir: "rtl", label: "فارسی" },
 };
 
+export const AUTH_PATHS = ["signin", "signup"]; 
+

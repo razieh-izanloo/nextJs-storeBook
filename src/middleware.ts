@@ -3,10 +3,10 @@ import {
   LANG_COOKIE_NAME,
   LANG_COOKIE_DURATION,
   support_langs,
+  AUTH_PATHS,
 } from "@/helpers/constants";
 import { jwtDecode } from "jwt-decode";
 
-const AUTH_PATHS = ["signin", "signup"]; 
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -62,7 +62,8 @@ export function middleware(request: NextRequest) {
   }
 
   const response = NextResponse.next();
-  response.headers.set("x-next-lang",validLocale)
+  response.headers.set("x-next-lang",validLocale);
+  response.headers.set("x-current-path",request.nextUrl.pathname);
   return response
 }
 
