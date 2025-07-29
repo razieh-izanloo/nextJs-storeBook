@@ -1,3 +1,5 @@
+import { INFO_LANGS } from "@/helpers/constants";
+import { getCurrentLang } from "@/helpers/language";
 import { getDictionary } from "dictionaries/dictionaries";
 import Image from "next/image";
 
@@ -10,6 +12,8 @@ const features = [
 
 export const StoreFeatures = async () => {
   const translate = await getDictionary("storeFeatures");
+  const currentLang = await getCurrentLang();
+  const dir = INFO_LANGS[currentLang].dir;
 
   return (
     <div className="px-2 md:px-0">
@@ -17,8 +21,10 @@ export const StoreFeatures = async () => {
         {features.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center sm:${
-              index !== features.length - 1 ? "border-l border-l-slate-400" : ""
+            className={`flex flex-col items-center sm: ${
+              index !== features.length - 1 && dir === "rtl"
+                ? "border-l border-l-slate-400"
+                : ""
             }`}
           >
             <Image

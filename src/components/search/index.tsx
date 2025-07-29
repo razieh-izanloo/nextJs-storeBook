@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useAppSelector } from "@/redux/hooks";
 import { useDictionary } from "@/hooks/useDictionary";
 import { Suggestions } from "./suggestions";
 import "./search.scss";
@@ -12,8 +11,7 @@ export const Search = () => {
   const [query, setQuery] = useState("");
 
   const router = useRouter();
-  const lang = useAppSelector((state) => state.app.lang);
-  const { dict, loadingTranslate } = useDictionary(lang, "search");
+  const { dict, loadingTranslate } = useDictionary("search");
 
   const handleSelect = (text: string) => {
     const encoded = encodeURIComponent(text);

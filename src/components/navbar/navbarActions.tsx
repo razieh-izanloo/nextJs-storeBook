@@ -6,7 +6,7 @@ import Skeleton from "react-loading-skeleton";
 
 export const NavbarActions = () => {
   const lang = useAppSelector((state) => state.app.lang);
-  const { dict, loadingTranslate } = useDictionary(lang, "home");
+  const { dict, loadingTranslate } = useDictionary("home");
 
   return (
     <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto px-2 md:px-0">

@@ -13,7 +13,7 @@ const Signin = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const currentLang = useAppSelector((state) => state.app.lang);
-  const { dict, loadingTranslate } = useDictionary(currentLang, "signin");
+  const { dict, loadingTranslate } = useDictionary("signin");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

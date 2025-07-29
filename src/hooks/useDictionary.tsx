@@ -1,11 +1,13 @@
 "use client";
 
+import { useAppSelector } from "@/redux/hooks";
 import { useEffect, useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useDictionary<T = any>(locale: string, key?: string) {
+export function useDictionary<T = any>(key?: string) {
   const [dict, setDict] = useState<T | null>(null);
   const [loadingTranslate, setLoadingTranslate] = useState(true);
+  const locale = useAppSelector((state) => state.app.lang);
 
   useEffect(() => {
     let active = true;
