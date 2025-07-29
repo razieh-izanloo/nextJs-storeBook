@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const Suggestions = (props: {
   query: string;
-  handleSelect: (text: string) => void;
+  handleSelect: (id: string) => void;
 }) => {
   const { query, handleSelect } = props;
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -51,14 +51,20 @@ export const Suggestions = (props: {
   }, [debouncedQuery]);
 
   return (
-    suggestions.length > 0 && (
-      <ul className="suggestions">
-        {suggestions.map((text) => (
-          <li key={text} onClick={() => handleSelect(text)}>
-            {text}
-          </li>
-        ))}
-      </ul>
-    )
+    <>
+      {suggestions.length > 0 && (
+        <ul className="suggestions">
+          {suggestions.map((item:any) => (
+            <li key={item.id} onClick={() => handleSelect(item.id)}>
+              {item.info.nameBook}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {query && !suggestions.length && (
+        <p className="text-gray-500 bg-white text-center py-6 border border-t-0 border-gray-100 rounded-b-[5px]">موردی یافنت نشد</p>
+      )}
+    </>
   );
 };

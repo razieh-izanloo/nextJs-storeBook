@@ -1,21 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { useDictionary } from "@/hooks/useDictionary";
 import { Suggestions } from "./suggestions";
+import { useAppSelector } from "@/redux/hooks";
 import "./search.scss";
 
 export const Search = () => {
   const [query, setQuery] = useState("");
-
   const router = useRouter();
+  const lang = useAppSelector((state) => state.app.lang);
   const { dict, loadingTranslate } = useDictionary("search");
 
-  const handleSelect = (text: string) => {
-    const encoded = encodeURIComponent(text);
-    router.push(`/search/${encoded}`);
+  const handleSelect = (id: string) => {
+    setQuery("");
+    router.push(`/${lang}/product/${id}`);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
