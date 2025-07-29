@@ -62,7 +62,7 @@ export function middleware(request: NextRequest) {
   }
 
   const response = NextResponse.next();
-  response.headers.set("x-next-lang",validLocale);
+  response.headers.set("x-current-lang",validLocale);
   response.headers.set("x-current-path",request.nextUrl.pathname);
   return response
 }
