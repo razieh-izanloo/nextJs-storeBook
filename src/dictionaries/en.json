@@ -69,5 +69,9 @@
     "bookSpecifications": "Book specifications",
     "users'Opinion": "Users' opinion",
     "addToCart": "Add to cart"
+  },
+  "auth": {
+    "forget": "Forget Password?",
+    "signup": "Sign up"
   }
 }

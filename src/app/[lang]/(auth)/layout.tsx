@@ -1,9 +1,12 @@
 import { LayoutProps } from "@/types/layout";
+import { getDictionary } from "../../../dictionaries/dictionaries";
 import Image from "next/image";
 import Link from "next/link";
 import "./layout.scss";
 
 export default async function AuthLayout({ children }: LayoutProps) {
+  const translate = await getDictionary("auth");
+
   return (
     <div className="container">
       <div className="w-full grid md:grid-cols-4 lg:grid-cols-3">
@@ -31,10 +34,10 @@ export default async function AuthLayout({ children }: LayoutProps) {
               href="en/forgetpass"
               className="text-[#1c7acb] text-[15px] w-fit"
             >
-              Forget Password?
+              {translate.forget}
             </Link>
             <Link href="en/signup" className="text-[15px] w-fit">
-              sign up
+              {translate.signup}
             </Link>
           </div>
         </div>

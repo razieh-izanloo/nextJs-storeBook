@@ -69,5 +69,9 @@
     "bookSpecifications": "مشخصات کتاب",
     "users'Opinion": "دیدگاه کاربران",
     "addToCart": "افزودن به سبد خرید"
+  },
+  "auth": {
+    "forget": "رمز عبور را فراموش کرده اید؟",
+    "signup": "ثبت نام"
   }
 }

@@ -55,7 +55,7 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(
         new URL(`/${validLocale}/home`, request.url)
       );
-  } else if (!isPublicPath) {
+  } else if (!isPublicPath &&  pathname === `/${validLocale}/cart`) {
     return NextResponse.redirect(
       new URL(`/${validLocale}/signin`, request.url)
     );
