@@ -21,13 +21,17 @@
     "language": "زبان",
     "palette": "هنر",
     "stethoscope": "علوم پزشکی",
-    "psychology": "روانشناسی",
+    "psychology": "روانشناسی و موفقیت",
     "literature": "ادبیات",
     "exercise": "ورزش",
     "engineering": "مهندسی",
     "childrenAndTeenagers": "کودک و نوجوان",
     "family": "خانواده",
-    "history": "تاریخ"
+    "history": "تاریخ",
+    "category": "دسته بندی",
+    "viewAll": "مشاهده تمام محصولات مربوط به این دسته بندی",
+    "search": "جستجو",
+    "doesNotExist": "موردی یافنت نشد"
   },
   "salesOfWeek": {
     "title": "پرفروش های هفته"
@@ -63,6 +67,7 @@
     "numberOfPages": "تعداد صفحات",
     "publicationDate": "تاریخ انتشار",
     "bookSpecifications": "مشخصات کتاب",
-    "users'Opinion": "دیدگاه کاربران"
+    "users'Opinion": "دیدگاه کاربران",
+    "addToCart": "افزودن به سبد خرید"
   }
 }

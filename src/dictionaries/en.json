@@ -27,7 +27,11 @@
     "engineering": "Engineering",
     "childrenAndTeenagers": "Children and teenagers",
     "family": "Family",
-    "history": "History"
+    "history": "History",
+    "category": "Category",
+    "viewAll": "View all products in this category",
+    "search": "Search",
+    "doesNotExist": "No items found"
   },
   "salesOfWeek": {
     "title": "Best sellers of the week"
@@ -63,6 +67,7 @@
     "numberOfPages": "Number of pages",
     "publicationDate": "Publication date",
     "bookSpecifications": "Book specifications",
-    "users'Opinion": "Users' opinion"
+    "users'Opinion": "Users' opinion",
+    "addToCart": "Add to cart"
   }
 }

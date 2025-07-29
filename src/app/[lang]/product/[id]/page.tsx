@@ -9,13 +9,14 @@ const ProductPage = async ({ params }: { params: { id: string } }) => {
   });
   const res = await response.json();
   if (res?.status === 200) data = res.data;
-  else return null;
 
-  return (
+  return data ? (
     <>
       <Detail data={data} />
       <Table dataTable={data.info} />
     </>
+  ) : (
+    <span>محصولی یافت نشد</span>
   );
 };
 export default ProductPage;
