@@ -3,9 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { CartAction } from "./cartAction";
 import { DetailProps } from "@/types/product";
+import { useDictionary } from "@/hooks/useDictionary";
+import Skeleton from "react-loading-skeleton";
 
 export const Detail = (props: DetailProps) => {
-  const { id, title, autor, desc, srcImg, price } = props.data;
+  const { title, autor, desc, srcImg, price } = props.data;
+  const { dict, loadingTranslate } = useDictionary("product");
 
   return (
     <div className="flex flex-col items-center sm:flex-row bg-white rounded-lg shadow-md p-6 w-11/12 mx-auto gap-6">
@@ -31,7 +34,7 @@ export const Detail = (props: DetailProps) => {
               {autor}
             </Link>
           </div>
-          <p className="text-xs text-gray-500 mt-1 text-right">{desc}</p>
+          <p className="text-xs text-gray-500 mt-1">{desc}</p>
         </div>
 
         <div className="mt-4 sm:flex justify-end gap-4 items-center">
@@ -39,7 +42,9 @@ export const Detail = (props: DetailProps) => {
 
           <p className="text-right text-gray-700 text-sm whitespace-nowrap">
             <span className="font-bold text-sm text-black">{price}</span>
-            <span>تومان</span>
+            <span className="px-1">
+              {loadingTranslate ? <Skeleton width="25px" /> : dict.toman}
+            </span>
           </p>
         </div>
       </div>

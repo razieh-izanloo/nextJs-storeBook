@@ -31,7 +31,8 @@
     "category": "Category",
     "viewAll": "View all products in this category",
     "search": "Search",
-    "doesNotExist": "No items found"
+    "doesNotExist": "No items found",
+    "toman": "Toman"
   },
   "salesOfWeek": {
     "title": "Best sellers of the week"
@@ -68,7 +69,8 @@
     "publicationDate": "Publication date",
     "bookSpecifications": "Book specifications",
     "users'Opinion": "Users' opinion",
-    "addToCart": "Add to cart"
+    "addToCart": "Add to cart",
+    "toman": "Toman"
   },
   "auth": {
     "forget": "Forget Password?",
@@ -84,6 +86,15 @@
     "inYourShoppingCart": "In your shopping cart",
     "itemIsAvailable": "item is available",
     "price": "Price",
-    "count": "Count"
+    "count": "Count",
+    "completePurchase": "Complete purchase"
+  },
+  "checkout": {
+    "address": "Address",
+    "contactNumber": "Contact number",
+    "postalCode": "Postal code",
+    "recipientName": "Recipient name",
+    "completeForm": "Please complete the form below",
+    "payment": "Payment"
   }
 }

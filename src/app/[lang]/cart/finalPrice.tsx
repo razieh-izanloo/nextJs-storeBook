@@ -1,10 +1,12 @@
 import { useDictionary } from "@/hooks/useDictionary";
 import { useAppSelector } from "@/redux/hooks";
 import Image from "next/image";
+import Link from "next/link";
 import Skeleton from "react-loading-skeleton";
 
 export const FinalPrice = () => {
   const products = useAppSelector((state) => state.cart.items);
+  const lang = useAppSelector((state) => state.app.lang);
   const { dict, loadingTranslate } = useDictionary("cart");
 
   const totalPrice = products.reduce(
@@ -45,18 +47,20 @@ export const FinalPrice = () => {
               />
               <p>
                 <span>{item.title}:</span>
-                <span className="px-1">
-                  {item.value?.toLocaleString()}
-                </span>
-                  <span>{dict.toman}</span>
+                <span className="px-1">{item.value?.toLocaleString()}</span>
+                <span>{dict.toman}</span>
               </p>
             </div>
           ))
         )}
       </div>
-      <button className="mt-16 w-full bg-[#0fa5a1] cursor-pointer hover:bg-[#0e7e7b] text-white py-3 rounded transition">
-        {loadingTranslate ? <Skeleton width="25px" /> : dict.shoppingCartTotal}
-      </button>
+      <Link
+        onClick={(e) => !products.length && e.preventDefault()}
+        href={`/${lang}/checkout`}
+        className="mt-16 w-full text-center bg-[#0fa5a1] cursor-pointer hover:bg-[#0e7e7b] text-white py-3 rounded transition"
+      >
+        {loadingTranslate ? <Skeleton width="25px" /> : dict.completePurchase}
+      </Link>
     </div>
   );
 };

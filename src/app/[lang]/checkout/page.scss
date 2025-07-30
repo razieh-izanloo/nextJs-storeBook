@@ -1,0 +1,38 @@
+.section-checkout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  .payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c7acb;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: #6dabe4;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-checkout {
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  [dir="rtl"] {
+    .section-checkout {
+      box-shadow: 3px 0 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+body {
+  background-color: white;
+  nav, footer, .section-search{
+    display: none;
+  }
+}

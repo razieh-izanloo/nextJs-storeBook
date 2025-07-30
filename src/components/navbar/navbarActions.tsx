@@ -24,7 +24,7 @@ export const NavbarActions = () => {
         className="relative rounded-full p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
       >
         <Link
-          href={`/${lang}/basket`}
+          href={`/${lang}/cart`}
           className="block hover:bg-[#f5f5f5] md:p-1.5 rounded-4xl"
         >
           <Image

@@ -56,7 +56,7 @@ export const List = ({ data, lang }: ListProps) => {
                   {item.title}
                 </h3>
                 <p className="text-xs text-gray-500">{item.desc}</p>
-                <p className="text-xs text-gray-400 mt-1">{item.price} تومان</p>
+                <p className="text-xs text-gray-400 mt-1">{item.price} <span>{dict.toman}</span></p>
               </div>
               <button className="p-2 w-6 h-6 text-gray-400 hover:text-red-500">
                 ♥

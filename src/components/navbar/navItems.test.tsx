@@ -81,7 +81,7 @@ describe("NavItems component", () => {
     //   (link) => link.getAttribute("href") === "/fa/signin"
     // );
     // const cartLink = links.find(
-    //   (link) => link.getAttribute("href") === "/fa/basket"
+    //   (link) => link.getAttribute("href") === "/fa/cart"
     // );
 
     // expect(loginLink).toBeInTheDocument();

@@ -1,9 +1,5 @@
 "use client";
-
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { removeFromCart } from "@/redux/slices/cart";
-import Image from "next/image";
-import Link from "next/link";
+import { useAppSelector } from "@/redux/hooks";
 import { FinalPrice } from "./finalPrice";
 import { useDictionary } from "@/hooks/useDictionary";
 import Skeleton from "react-loading-skeleton";
@@ -14,7 +10,7 @@ export const Cart = () => {
   const { dict, loadingTranslate } = useDictionary("cart");
 
   return (
-    <div className="flex flex-col sm:flex-row min-h-screen p-6 bg-gray-100 gap-6">
+    <div className="flex flex-col sm:flex-row min-w-11/12 p-6 bg-gray-100 gap-6">
       <FinalPrice />
 
       <div className="flex-1 bg-white rounded-lg shadow p-6 overflow-auto">

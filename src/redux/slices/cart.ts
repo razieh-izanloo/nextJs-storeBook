@@ -13,7 +13,7 @@ interface CartState {
   totalPrice: number;
 }
 
-const calculateTotalPrice = (items: CartItem[]): number =>
+export const calculateTotalPrice = (items: CartItem[]): number =>
   items.reduce((total, item) => total + Number(item.price) * item.quantity, 0);
 
 const initialState: CartState = {
@@ -21,18 +21,18 @@ const initialState: CartState = {
   totalPrice: 0,
 };
 
-if (typeof window !== 'undefined') {
-  const storedCart = localStorage.getItem('cart');
-  if (storedCart) {
-    try {
-      const parsed = JSON.parse(storedCart) as CartItem[];
-      initialState.items = parsed;
-      initialState.totalPrice = calculateTotalPrice(parsed);
-    } catch (e) {
-      console.error('Failed to parse cart from localStorage', e);
-    }
-  }
-}
+// if (typeof window !== 'undefined') {
+//   const storedCart = localStorage.getItem('cart');
+//   if (storedCart) {
+//     try {
+//       const parsed = JSON.parse(storedCart) as CartItem[];
+//       initialState.items = parsed;
+//       initialState.totalPrice = calculateTotalPrice(parsed);
+//     } catch (e) {
+//       console.error('Failed to parse cart from localStorage', e);
+//     }
+//   }
+// // }
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -68,8 +68,13 @@ const cartSlice = createSlice({
       state.totalPrice = 0;
       localStorage.removeItem('cart');
     },
+  initialStateCart(state, action: PayloadAction<{ items: CartItem[]; totalPrice: number }>) {
+  state.items = action.payload.items;
+  state.totalPrice = action.payload.totalPrice;
+}
+
   },
 });
 
-export const { addToCart, removeFromCart, updateQuantity, clearCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, updateQuantity, clearCart, initialStateCart } = cartSlice.actions;
 export default cartSlice.reducer;

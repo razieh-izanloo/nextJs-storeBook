@@ -31,7 +31,8 @@
     "category": "دسته بندی",
     "viewAll": "مشاهده تمام محصولات مربوط به این دسته بندی",
     "search": "جستجو",
-    "doesNotExist": "موردی یافنت نشد"
+    "doesNotExist": "موردی یافنت نشد",
+    "toman": "تومان"
   },
   "salesOfWeek": {
     "title": "پرفروش های هفته"
@@ -68,7 +69,8 @@
     "publicationDate": "تاریخ انتشار",
     "bookSpecifications": "مشخصات کتاب",
     "users'Opinion": "دیدگاه کاربران",
-    "addToCart": "افزودن به سبد خرید"
+    "addToCart": "افزودن به سبد خرید",
+    "toman": "تومان"
   },
   "auth": {
     "forget": "رمز عبور را فراموش کرده اید؟",
@@ -86,5 +88,13 @@
     "itemIsAvailable": "کالا موجود است",
     "count": "تعداد",
     "price": "قیمت"
+  },
+  "checkout": {
+    "address": "آدرس",
+    "contactNumber": "شماره تماس",
+    "postalCode": "کدپستی",
+    "recipientName": "نام گیرنده",
+    "completeForm": "لطفا فرم زیر را تکمیل کنید",
+    "payment": "پرداخت"
   }
 }
