@@ -5,14 +5,24 @@ import { addToCart } from "@/redux/slices/cart";
 import { useState } from "react";
 import { useDictionary } from "@/hooks/useDictionary";
 import Skeleton from "react-loading-skeleton";
+import { DetailProps } from "@/types/product";
 
-export const CartAction = ({ product }: any) => {
+export const CartAction = (props: DetailProps) => {
+  const { data } = props;
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
   const { dict, loadingTranslate } = useDictionary("product");
 
   const handleAdd = () => {
-    dispatch(addToCart({ ...product, quantity: count }));
+    dispatch(
+      addToCart({
+        title: data.title,
+        price: data.price,
+        id: data.id,
+        srcImg: data.srcImg,
+        quantity: count,
+      })
+    );
   };
 
   const btnAction = (operator: string) => {

@@ -35,7 +35,7 @@ export const Detail = (props: DetailProps) => {
         </div>
 
         <div className="mt-4 sm:flex justify-end gap-4 items-center">
-          <CartAction />
+          <CartAction data={props.data} />
 
           <p className="text-right text-gray-700 text-sm whitespace-nowrap">
             <span className="font-bold text-sm text-black">{price}</span>
