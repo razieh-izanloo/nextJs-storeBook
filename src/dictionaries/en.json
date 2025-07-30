@@ -73,5 +73,17 @@
   "auth": {
     "forget": "Forget Password?",
     "signup": "Sign up"
+  },
+  "cart": {
+    "productPrices": "Product prices",
+    "productDiscounts": "Product discounts",
+    "toman": "Toman",
+    "payableAmount": "Payable amount",
+    "shoppingCartTotal": "Shopping cart total",
+    "shoppingCart": "Shopping Cart",
+    "inYourShoppingCart": "In your shopping cart",
+    "itemIsAvailable": "item is available",
+    "price": "Price",
+    "count": "Count"
   }
 }
