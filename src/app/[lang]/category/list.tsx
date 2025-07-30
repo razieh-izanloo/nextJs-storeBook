@@ -24,7 +24,6 @@ export const List = ({ data, lang }: ListProps) => {
         item.desc.toLowerCase().includes(lowerSearch)
     );
   }, [search, data]);
-  console.log(filteredData);
 
   return (
     <div className="h-screen overflow-hidden flex flex-col w-11/12 bg-white my-4">
