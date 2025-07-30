@@ -17,7 +17,7 @@ export const viewport = {
 
 export default async function RootLayout({ children }: LayoutProps) {
   const currentLang = await getCurrentLang();
-
+  
   return (
     <html lang={currentLang} dir={INFO_LANGS[currentLang].dir}>
       <body>

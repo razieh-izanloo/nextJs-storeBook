@@ -4,7 +4,22 @@
     "welcome": "خوش آمدید!",
     "captionBtn": "ورود",
     "email": "ایمیل",
-    "password": "رمزعبور"
+    "password": "رمزعبور",
+    "success": "ورود با  موفقیت انجام شد",
+    "incorrectPass": "رمز عبور و یا ایمیل اشتباه است",
+    "problemServer": "مشکلی در سرور وجود دارد. لطفا دوباره امتحان کنید"
+  },
+  "signup": {
+    "email": "ایمیل",
+    "password": "پسورد",
+    "lastName": "نام خانوادگی",
+    "firstName": "نام",
+    "repeatPassword": "تکرار پسورد",
+    "submitBtn": "ثبت نام",
+    "success": "با موفقیت ثبت شد",
+    "repetitionPass": "پسورد و تکرار پسورد یکسان نیست",
+    "problemServer": "مشکلی در سرور وجود دارد. لطفا دوباره امتحان کنید.",
+    "emailExists": "ایمیل از قبل وجود داشت"
   },
   "home": {
     "home": "صفحه اصلی",
@@ -74,7 +89,8 @@
   },
   "auth": {
     "forget": "رمز عبور را فراموش کرده اید؟",
-    "signup": "ثبت نام"
+    "signup": "ثبت نام",
+    "signin": "ورود"
   },
   "cart": {
     "productPrices": "قیمت کالاها ",

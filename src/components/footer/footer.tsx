@@ -5,11 +5,17 @@ import Link from "next/link";
 import React from "react";
 import { links, socialMedia } from "./itemsFooter";
 import { LanguageSelector } from "../languageSelector/languageSelector";
+import { headers } from "next/headers";
 
 export const Footer = async () => {
   const currentLang = await getCurrentLang();
   const translate = await getDictionary("footer");
+  const pathname = (await headers()).get("x-current-path")
+  const inValidRoute = ["signin", "signup", "checkout"].some((route) =>
+    pathname?.includes(route)
+  );
 
+  if (inValidRoute) return null;
   return (
     <footer className="bg-white text-[#484d52] py-10 mt-10 w-full">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

@@ -3,15 +3,32 @@ import jwt from "jsonwebtoken";
 
 const SECRET_KEY = "your_super_secret_key";
 
+import path from "path";
+import { readFileSync, writeFileSync, existsSync } from "fs";
+
+const filePath = path.join(process.cwd(), "data", "users.json");
+
+const getUsers = (): any[] => {
+  if (!existsSync(filePath)) {
+    writeFileSync(filePath, JSON.stringify([]));
+  }
+
+  const bufferData = readFileSync(filePath);
+  return JSON.parse(bufferData.toString("utf8"));
+};
+
+const validation = (email: string, password: string) => {
+  const users = getUsers();
+  return users.find((user: any) => user.email === email && user.password === password);
+};
+
+
 export async function POST(req: NextRequest) {
 
   try {
     const { email, password } = await req.json();
 
-    const validEmail = "ali@gmail.com";
-    const validPassword = "12345678";
-
-    if (email === validEmail && password === validPassword) {
+    if (validation(email, password)) {
       const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: "1h" });
 
       const response = NextResponse.json({ message: "Login successful", status: 200 });

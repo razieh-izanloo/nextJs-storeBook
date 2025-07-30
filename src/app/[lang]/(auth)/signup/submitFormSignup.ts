@@ -1,12 +1,18 @@
-  export const submitFormLogin = async (email: string, password: string) => {
-      const res = await fetch("/api/login", {
+  type ValuesProps = {
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    repeatPassword: string
+  }
+  export const submitFormSignup = async (values: ValuesProps) => {
+      const res = await fetch("/api/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email,
-          password,
+          ...values
         }),
       });
 
@@ -16,7 +22,8 @@
 
    export const messages: Record<number, { text: string; type: string }> = {
       200: { text: "success", type: "success" },
-      401: { text: "incorrectPass", type: "error" },
+      400: { text: "repetitionPass", type: "warning" },
+      409: { text: "emailExists", type: "warning" },
       500: {
         text: "problemServer",
         type: "error",

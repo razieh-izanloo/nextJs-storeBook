@@ -25,7 +25,6 @@ export default function StoreProvider({
     storeRef.current?.dispatch(updateApp({ lang, dir }));
 
     const storedCart = localStorage.getItem("cart");
-    console.log(storedCart)
     if (storedCart) {
       const parsed = JSON.parse(storedCart);
       storeRef.current?.dispatch(

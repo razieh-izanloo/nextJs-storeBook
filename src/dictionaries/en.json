@@ -4,7 +4,22 @@
     "welcome": "welcome!",
     "captionBtn": "Sign in",
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "success": "login success",
+    "incorrectPass": "The email or password is incorrect",
+    "problemServer": "There is a problem with the server. Please try again"
+  },
+  "signup": {
+    "email": "Email",
+    "password": "Password",
+    "lastName": "Last Name",
+    "firstName": "First Name",
+    "repeatPassword": "Repeat Password",
+    "submitBtn": "Sign Up",
+    "success": "Signup success",
+    "repetitionPass": "Password is not the same as password repetition",
+    "problemServer": "There is a problem with the server. Please try again",
+    "emailExists": "Email already existed"
   },
   "home": {
     "home": "Home",
@@ -74,7 +89,8 @@
   },
   "auth": {
     "forget": "Forget Password?",
-    "signup": "Sign up"
+    "signup": "Sign up",
+    "signin": "Sign in"
   },
   "cart": {
     "productPrices": "Product prices",

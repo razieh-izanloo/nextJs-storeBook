@@ -4,4 +4,5 @@ export interface INputpProps {
   onChange: (value: string) => void;
   name: string;
   loading?: boolean;
+  className?: string;
 }

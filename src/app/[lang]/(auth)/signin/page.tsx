@@ -30,7 +30,7 @@ const Signin = () => {
       dispatch(
         updateApp({
           errorMessage: {
-            text: messages[status].text,
+            text: dict[messages[status].text],
             type: messages[status].type,
           },
         })
