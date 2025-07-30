@@ -17,7 +17,7 @@ export const NavItems = () => {
 
   return (
     <div className="nav-items">
-      <div className="flex flex-col md:flex-row space-x-4 md:px-2">
+      <div className="flex flex-col md:flex-row space-x-4 md:px-2 z-1 relative bg-white">
         {items.map((item) =>
           loadingTranslate ? (
             <Skeleton width="100px" key={item.name} />
