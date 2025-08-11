@@ -12,7 +12,7 @@ const NotFound = () => {
         >
           <Image
             src="https://cdn.svgator.com/images/2022/01/404-svg-animation.svg"
-            alt="Kitty Yarn Play 404 page animation - Made by SVGator"
+            alt="Animated 404 error page showing a cat playing with a ball of yarn"
             fill
           />
         </object>
