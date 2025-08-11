@@ -6,13 +6,16 @@ const NotFound = () => {
   return (
     <div id="section-notFound">
       <div id="not-found">
-        <Image
-          src="/images/404.png"
-          className="max-w-full"
-          width={500}
-          height={400}
-          alt="404"
-        />
+        <object
+          type="image/svg+xml"
+          data="https://cdn.svgator.com/images/2022/01/404-svg-animation.svg"
+        >
+          <Image
+            src="https://cdn.svgator.com/images/2022/01/404-svg-animation.svg"
+            alt="Kitty Yarn Play 404 page animation - Made by SVGator"
+            fill
+          />
+        </object>
         <BtnBack title="Go back" />
       </div>
     </div>
