@@ -112,5 +112,11 @@
     "recipientName": "نام گیرنده",
     "completeForm": "لطفا فرم زیر را تکمیل کنید",
     "payment": "پرداخت"
+  },
+  "metaData": {
+    "notFound": "صفحه موردنظر پیدا نشد"
+  },
+  "notFound": {
+    "btnBack": "بازگشت"
   }
 }

@@ -1,8 +1,18 @@
 import Image from "next/image";
 import { BtnBack } from "@/components/btnBack/btnBack";
+import { getDictionary } from "../dictionaries/dictionaries";
 import "./not-found.scss";
 
-const NotFound = () => {
+export async function generateMetadata() {
+  const translate = await getDictionary("metaData");
+  return {
+    title: `NetBook | ${translate.notFound}`,
+  };
+}
+
+const NotFound = async() => {
+    const translate = await getDictionary("notFound");
+
   return (
     <div id="section-notFound">
       <div id="not-found">
@@ -16,7 +26,7 @@ const NotFound = () => {
             fill
           />
         </object>
-        <BtnBack title="Go back" />
+        <BtnBack title={translate.btnBack} />
       </div>
     </div>
   );

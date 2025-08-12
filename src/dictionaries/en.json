@@ -112,5 +112,11 @@
     "recipientName": "Recipient name",
     "completeForm": "Please complete the form below",
     "payment": "Payment"
+  },
+  "metaData": {
+    "notFound": "Not Found"
+  },
+  "notFound": {
+    "notFound": "Go back"
   }
 }
